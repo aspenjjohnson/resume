@@ -6,7 +6,7 @@
 %------------------------
 
 % Originally was 10.999999999999pt, as information gets more extensive, get closer to this value %
-\documentclass[letterpaper,11.000000001 pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -144,18 +144,23 @@
 \end{center}
 
 %-----------EDUCATION-----------
+\section{Summary}
+  Data Science student and research assistant with experience in data curation, model validation, technical documentation, and applied research across econometrics, 
+  physics, and educational technology. Skilled at reviewing complex information for accuracy, clarity, consistency, and relevance. Interested in AI evaluation, 
+  data annotation, prompt testing, and improving AI-assisted tools as a means to get closer to a world where humans and AI can co-exist rather than incite fear.
 
+%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeEducationEntry
       {Valdosta State University}
-      {Incoming B.S in Data Science: Computational Sci. \& Eng. Track}
-      {Expected: 2028, GPA: N/A}
+      {Incoming B.S. in Data Science: Computational Science \& Engineering Track}
+      {}
 
     \resumeEducationEntry
       {Palm Beach State College}
-      {A.A in STEM: Mechanical \& Aerospace Engineering Track}
-      {Expected: Summer 2026, GPA: 3.5}
+      {A.A. in STEM: Mechanical \& Aerospace Engineering Track}
+      {June 2025 -- May 2026, GPA: 3.20}
   \resumeSubHeadingListEnd
   
 %-----------PUBLICATIONS-----------
@@ -178,8 +183,9 @@
       {Physics Undergraduate Researcher}{Mar 2026 – Present}
       {Valdosta State University}{On-Site/Remote}
       \resumeItemListStart
-        \resumeItem{Worked in tandem with Professor S. Mubin on modelling stock market illiquidity as a segway to a larger project on partcile simulations.}
-        \resumeItem{Utilized prgramming languages, libraries, and environments such as NumPy, MatplotLib, Seaborn, Google Colab, NotebookLM, Perplexity, etc. for visualizations and data anlysis.}
+        \resumeItem{Collaborate with Professor S. Mubin on modeling stock market illiquidity as a bridge toward larger particle simulation research.}
+        \resumeItem{Use Python-based tools including NumPy, Matplotlib, Google Colab, NotebookLM, and Perplexity to support data analysis, visualization, literature review, and research documentation.}
+        \resumeItem{Review model outputs, visualizations, and research notes for accuracy, clarity, and consistency before faculty discussion.}
         \resumeItemListEnd
     \resumeSubheading
       {Econometrics Researcher}{Jan 2025 – Dec 2025}
@@ -188,6 +194,7 @@
         \resumeItem{Sourced and structured financial data from the Bloomberg Terminal, computing return series and descriptive statistics across candidate assets in Excel and R.}
         \resumeItem{Benchmarked 6+ volatility models (gjrGARCH, sGARCH, Beta-t-EGARCH) in R and GAUSS, selecting optimal asset universe based on data sufficiency and model fit.}
         \resumeItem{Debugged compilation errors across R and GAUSS environments, documenting terminal logs with line-level annotations for weekly faculty review.}
+        \resumeItem{Validated model outputs and documented errors, inconsistencies, and performance differences across competing volatility models for weekly faculty review.}
         \resumeItem{Co-authored peer-reviewed manuscript in \LaTeX\ published in \textit{Applied Economics Letters} (Taylor \& Francis, 2025).}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -198,8 +205,9 @@
       {\href{https://www.zinzino.com/site/us/en-us/}{Zinzino USA}}{Remote}
       \resumeItemListStart
         \resumeItem{Reduced chargeback processing time by 87\% through workflow digitization and documentation streamlining.}
-        \resumeItem{Refined the charge back process within a few weeks of arrival, and curated a reference guide to aid future onboarding employees.}
+        \resumeItem{Refined the chargeback process within the first few weeks and created a clear reference guide to support onboarding, consistency, and cross-functional accuracy.}
         \resumeItem{Created clear documentation that enabled cross-departmental collaboration and made Finance operations easy for shareholders and upline leaders to understand.}
+        \resumeItem{Reviewed finance-related documentation and case details for completeness, accuracy, and clarity before sharing guidance with internal stakeholders.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -210,6 +218,27 @@
 %-----------AI/ML + Physics PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Econometric Modeling in Complex Physical Systems $|$ In Progress} \emph{}}{}
+          \resumeItemListStart
+            \resumeItem{Investigating the applicability of GARCH-family models to complex physical systems exhibiting variance clustering, including geomagnetic storms, seismic activity, and solar wind turbulence.}
+            \resumeItem{Sourcing and structuring large-scale geophysical time series data from USGS, NOAA, and NCAR databases for empirical volatility modeling.}
+            \resumeItem{Exploring connections between econometric volatility modeling and established physical laws.}
+            \resumeItem{Consulting seismic research labs to learn domain-specific considerations for interpreting earthquake time series and applying volatility-based modeling methods.}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{DIY Cyberdeck $|$ In Progress}}{}
+          \vspace{-8pt}\\
+          {\small \emph{Fusion 360, KiCad, PCB Design, Circuit Design, Electromagnetism, Embedded Systems}}
+          \vspace{-4pt}
+          \resumeItemListStart
+            \resumeItem{Designing a portable computing device inspired by the \href{https://www.clockworkpi.com/home-uconsole}{uConsole} by ClockWorkPi, focusing on modular layout, physical constraints, and technical documentation.}
+            \resumeItem{Learning Fusion 360 to prototype enclosure concepts, component placement, mounting points, and internal spacing.}
+            \resumeItem{Learning KiCad workflows to develop schematic capture, PCB layout, component selection, and hardware design documentation skills.}
+        \resumeItemListEnd
+
+        \begin{comment}
         \resumeProjectHeading
           {\href{https://github.com/DormantBillionaire/cc-me-planner}{\textbf{CC-Me-Planner | (In Progress)}} \emph{}}{}
           \resumeItemListStart
@@ -224,14 +253,7 @@
             \resumeItem{Conducting active community-driven user research by engaging physics, mathematics, and computer science student communities across Reddit, Discord, and academic forums.}
             \resumeItem{Integrating \href{https://github.com/ManimCommunity/manim}{ManimCE} and \href{https://github.com/3b1b/manim}{ManimGL} animation engines to render programmatic, publication-quality simulations of classical mechanics, electromagnetism, and quantum systems.}
           \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{Econometric Modeling in Complex Physical Systems | (In Progress)} \emph{}}{}
-          \resumeItemListStart
-            \resumeItem{Investigating the applicability of GARCH-family models to complex physical systems exhibiting variance clustering, including geomagnetic storms, seismic activity, and solar wind turbulence.}
-            \resumeItem{Sourcing and structuring large-scale geophysical time series data from USGS, NOAA, and NCAR databases for empirical volatility modeling.}
-            \resumeItem{Exploring connections between econometric volatility modeling and established physical laws.}
-          \resumeItemListEnd
-        \begin{comment}
+
         \resumeProjectHeading
           {\href{https://github.com/DormantBillionaire/study-dashboard}{\textbf{Name TBD | Personal Study Dashboard | (In Progress)}} $|$ \emph{HTML, CSS, JavaScript, Python, FastAPI, REST APIs}}{}
           \resumeItemListStart
@@ -266,33 +288,28 @@
         \resumeProjectHeading
           {\textbf{\href{https://csel.mercer.edu/student-engagement/book-clubs/}{Book Club Fellow}} $|$ \emph{Selected as one of ten students to participate through Mercer Universities Economics Department}}{}
         \resumeProjectHeading
-          {\textbf{\href{https://www.youtube.com/@AP4Pres}{Content Creation}} $|$ \emph{Streamed myself doing psets and projects on youtube}}{}
+          {\textbf{\href{https://www.youtube.com/@AP4Pres}{Content Creation}} $|$ \emph{Created educational livestream content focused on problem sets, coding projects, and technical self-study.}}{}
         \resumeProjectHeading
           {\textbf{\href{https://www.gotostage.com/channel/ae3be1897f1e486ebe5a0a0d417396e2/recording/6ecf53ff64484050af20f49c86a9d760/watch}{AWS Campus Prep Series Participant}} $|$ \emph{Completed a Summer-long series of webinars regarding Amazon Careers and Cloud Services}}{}
   \resumeSubHeadingListEnd
 
 %-----------SKILLS & OTHER-----------
-\begin{minipage}[t]{0.47\textwidth}
-\vspace{0pt}
+%-----------SKILLS & OTHER-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages in order of proficiency}{: Python, Java, LaTeX, \newline HTML/CSS, R, Gauss, C/C++, JavaScript, Octave} \\
-     \textbf{Developer Tools}{: Git, CLI, VSCode} \\
-    }}
- \end{itemize}
-\end{minipage}
-\hspace{0.02\textwidth}
-\vrule width 0.4pt
-\hspace{0.02\textwidth}
-\begin{minipage}[t]{0.47\textwidth}
-\vspace{0pt}
-\section{Other}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Clubs/Organizations}{:NSBE, SWE, and \newline Codecademy's Women in Tech} \\
-    }}
- \end{itemize}
-\end{minipage}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Programming and Analysis:} Python, R, GAUSS, Java, C/C++, JavaScript, Octave, Excel}{}
+
+    \resumeProjectHeading
+      {\textbf{AI/Data Review:} AI response evaluation, prompt testing, data annotation, data labeling, data quality review, pattern recognition, structured documentation}{}
+
+    \resumeProjectHeading
+      {\textbf{Libraries \& Tools:} NumPy, Matplotlib, Seaborn, Google Colab, \LaTeX, Git, CLI, VS Code}{}
+
+    \resumeProjectHeading
+      {\textbf{Research \& Communication:} Literature review, model validation, technical writing, data visualization, educational content development}{}
+\resumeSubHeadingListEnd
+
+
 %-------------------------------------------
 \end{document}
