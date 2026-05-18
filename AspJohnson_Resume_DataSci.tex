@@ -1,0 +1,222 @@
+%-------------------------
+% Resume in Latex
+% Author : Aspen Johnson
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\urlstyle{same}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.1pt}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeEducationEntry}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \\
+      \textit{\small#2} & \textit{\small #3} \hfill
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape \underline{Aspen Johnson}} \\ \vspace{5pt}
+    \small +1 (561) 299-8424 $|$ \href{mailto:aspenjohnson2024@gmail.com}{aspenjohnson2024@gmail.com} $|$
+    \href{https://www.linkedin.com/in/aspenjjohnson/}{linkedin.com/in/aspenjjohnson/} $|$
+    \href{https://github.com/DormantBillionaire}{github.com/DormantBillionaire} $|$
+    \href{https://www.aspenhq.dev/}{www.aspenhq.dev}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  Data Science student and research assistant with experience in data curation, time-series analysis, model validation, technical documentation, and applied research across econometrics and physics. Skilled at cleaning and structuring datasets, evaluating model outputs, documenting inconsistencies, and communicating technical findings clearly. Interested in data science, AI evaluation, data quality, physical AI, and computational modeling for real-world systems.
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationEntry
+      {Valdosta State University}
+      {Incoming B.S. in Data Science: Computational Science \& Engineering Track; Minors: Physics and Mathematics}
+      {}
+
+    \resumeEducationEntry
+      {Palm Beach State College}
+      {A.A. in STEM: Mechanical \& Aerospace Engineering Track}
+      {Completed May 2026, GPA: 3.20}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+{\small
+\textbf{Programming \& Analysis:} Python, R, GAUSS, Java, C/C++, JavaScript, Octave, Excel \\
+\textbf{Data Science:} data cleaning, exploratory data analysis, time-series analysis, model validation, statistical modeling, data visualization \\
+\textbf{AI/Data Review:} AI response evaluation, prompt testing, data annotation, data labeling, data quality review, pattern recognition \\
+\textbf{Libraries \& Tools:} NumPy, Matplotlib, Seaborn, Google Colab, \LaTeX, Git, CLI, VS Code, Bloomberg Terminal \\
+\textbf{Research \& Documentation:} literature review, technical writing, reproducible notes, model comparison, workflow documentation
+}
+\vspace{2pt}
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928}{\textbf{An empirical application of improved gradient scaling for score-driven volatility filters}}}{}
+    \resumeItemListStart
+      \resumeItem{\textit{Applied Economics Letters}, Taylor \& Francis (2025) $|$ Co-authored with \href{https://business.mercer.edu/faculty-and-insights/faculty-directory/dr-szabolcs-blazsek/}{\textbf{Szabolcs Blazsek}} (Mercer University) and \href{https://www.linkedin.com/in/adamkobor/}{\textbf{Adam Kobor}} (New York University Investment Office).}
+      \resumeItem{Contributed to data curation, formal analysis, methodology, software implementation, validation, visualization, and manuscript preparation for empirical testing of the Hessian-filter scaled Beta-t-EGARCH volatility model across Bitcoin, S\&P 500, Gold, U.S. REITs, and CHF/JPY from 2010--2025.}
+      \resumeItem{Selected as 1 of 15 research papers to present a lecture at the 2026 Atlanta Research Conference.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Research \& Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Physics Undergraduate Researcher}{Mar 2026 -- Present}
+      {Valdosta State University}{On-Site/Remote}
+      \resumeItemListStart
+        \resumeItem{Collaborate with Professor S. Mubin on modeling stock market illiquidity as a bridge toward larger particle simulation research.}
+        \resumeItem{Use Python-based tools including NumPy, Matplotlib, Google Colab, NotebookLM, and Perplexity to support data analysis, visualization, literature review, and research documentation.}
+        \resumeItem{Review model outputs, visualizations, and research notes for accuracy, clarity, and consistency before faculty discussion.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Econometrics Researcher}{Jan 2025 -- Dec 2025}
+      {Mercer University}{On-Site/Remote}
+      \resumeItemListStart
+        \resumeItem{Sourced, cleaned, and structured financial time-series data from the Bloomberg Terminal, computing return series and descriptive statistics across candidate assets in Excel and R.}
+        \resumeItem{Benchmarked 6+ volatility models (gjrGARCH, sGARCH, Beta-t-EGARCH) in R and GAUSS, selecting an optimal asset universe based on data sufficiency and model fit.}
+        \resumeItem{Validated model outputs and documented errors, inconsistencies, and performance differences across competing volatility models for weekly faculty review.}
+        \resumeItem{Debugged compilation errors across R and GAUSS environments, documenting terminal logs with line-level annotations to support reproducibility.}
+        \resumeItem{Co-authored peer-reviewed manuscript in \LaTeX\ published in \textit{Applied Economics Letters} (Taylor \& Francis, 2025).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Financial Analyst Intern}{May 2025 -- Dec 2025}
+      {\href{https://www.zinzino.com/site/us/en-us/}{Zinzino USA}}{Remote}
+      \resumeItemListStart
+        \resumeItem{Reduced chargeback processing time by 87\% through workflow digitization and documentation streamlining.}
+        \resumeItem{Refined the chargeback process within the first few weeks and created a reference guide to support onboarding, consistency, and cross-functional accuracy.}
+        \resumeItem{Reviewed finance-related documentation and case details for completeness, accuracy, and clarity before sharing guidance with internal stakeholders.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Econometric Modeling in Complex Physical Systems $|$ In Progress}}{}
+          \resumeItemListStart
+            \resumeItem{Investigating the applicability of GARCH-family models to complex physical systems exhibiting variance clustering, including geomagnetic storms, seismic activity, and solar wind turbulence.}
+            \resumeItem{Sourcing and structuring large-scale geophysical time-series data from USGS, NOAA, and NCAR databases for empirical volatility modeling.}
+            \resumeItem{Consulting seismic research labs to learn domain-specific considerations for interpreting earthquake time series and applying volatility-based modeling methods.}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{DIY Cyberdeck $|$ In Progress}}{}
+          
+          \vspace{-2pt}
+          {\small \emph{Fusion 360, KiCad, PCB design, circuit design, electromagnetism, embedded systems}}
+          \vspace{-4pt}
+          \resumeItemListStart
+            \resumeItem{Designing a portable computing device inspired by the \href{https://www.clockworkpi.com/home-uconsole}{ClockworkPi uConsole}, with emphasis on modular layout, enclosure constraints, and technical documentation.}
+            \resumeItem{Using Fusion 360 to prototype enclosure concepts, component placement, mounting points, and internal spacing.}
+            \resumeItem{Learning KiCad workflows to develop schematic capture, PCB layout, component selection, and hardware design documentation skills.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership, Community Engagement \& Extracurriculars}
+  \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\href{https://mercerbears.com/sports/womens-basketball/roster/aspen-johnson/10193}{\textbf{Division I Women's College Basketball Player}} $|$ \emph{Mercer University (2022--2025)}}{}
+        \resumeProjectHeading
+          {\href{https://vstateblazers.com/sports/womens-basketball}{\textbf{Division II Women's College Basketball Player}} $|$ \emph{Valdosta State University (Present)}}{}
+        \resumeProjectHeading
+          {\href{https://www.meetup.com/physicswithfriends/}{\textbf{Weekly Physics Study Group Member}} $|$ \emph{Studying Helliwell's \textit{Modern Classical Mechanics}}}{}
+        \resumeProjectHeading
+          {\textbf{Read2Succeed Tutor} $|$ \emph{Supported elementary literacy development and student confidence}}{}
+        \resumeProjectHeading
+          {\textbf{AWS Campus Prep Series Participant} $|$ \emph{Completed career and cloud-focused webinar series}}{}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
