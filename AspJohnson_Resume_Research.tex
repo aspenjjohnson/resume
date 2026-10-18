@@ -49,20 +49,23 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\usepackage[
+    left=0.45 in,
+    right=0.45 in,
+    top=0.50in,
+    bottom=0.50in
+]{geometry}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
+
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -90,11 +93,20 @@
     \end{tabular*}\vspace{-6pt}
 }
 
+% Formats and defines the original Project heading
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-6pt}
+  \item
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \small #1 & \small #2 \\
+  \end{tabularx}\vspace{-6pt}
+}
+
+% Allows it/ the project heading, if too long, to wrap to the next line
+\renewcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{0.5em}}r@{}}
+    \small #1 & \small #2 \\
+  \end{tabularx}\vspace{-8pt}
 }
 
 \newcommand{\resumeEducationEntry}[3]{
@@ -165,43 +177,58 @@
   \resumeSubHeadingListEnd
   
 %-----------PUBLICATIONS-----------
-\section{Publications}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\href{https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928}{\textbf{An empirical application of improved gradient scaling for score-driven volatility filters}}}{Mercer University}
-      \resumeItem{ - Selected as 1 of 15 research papers to present a lecture at the 2026 Atlanta Research Conference.}
-      \resumeSubHeadingListEnd
+\section{Publications \& Research Presentations}
+\resumeSubHeadingListStart
+
+  % Published Paper
+  \resumeProjectHeading
+    {\href{https://www.tandfonline.com/doi/full/10.1080/13504851.2025.2606928}
+    {\textbf{An empirical application of improved gradient scaling for score-driven volatility filters}}}
+    {Published}
+
+  \resumeItemListStart
+    \resumeItem{Selected as 1 of 15 research papers to present at the 2026 Atlanta Research Conference.}
+    \resumeItem{Georgia Undergraduate Research Conference (GURC), November 2026 -- Accepted for presentation.}
+  \resumeItemListEnd
+
+  % Manuscript Under Review
+  % Need to figure out a way to get this to 
+  \resumeProjectHeading
+    {\textbf{Score-Driven Dynamic Fractional Integration with Heavy Tails:
+    An Application to Earthquake Activity}}
+    {Under Review}
+
+\resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
+%----------- RESEARCH EXPERIENCE -----------
 \section{Research Experience}
 % LONG MEMORY SEISMICITY RESEARCH WITH SZABI %
   \resumeSubHeadingListStart  
     \resumeSubheading
-      {Research Assistant $|$ Long-Memory Time Series \& Seismicity Modelling}{June 2026 – Present}
+      {Undergraduate Research $|$ Long-Memory Time Series \& Seismicity Modelling}{June 2026 – October 2026}
       {Faculty Guided Research w/  \href{https://business.mercer.edu/faculty-and-insights/faculty-directory/dr-szabolcs-blazsek/}{Prof. Szabolcs Blaszek}}{Remote}
       \resumeItemListStart
-        \resumeItem{Studied long-memory dynamics, persistence, and fractional integration as tools for analyzing complex real-world systems in Alaska and California.}
-        \resumeItem{Explored public earthquake datasets from sources such as USGS and NOAA to evaluate how seismic activity can be transformed into interpretable time-series variables.}
-        \resumeItem{Analyzed over 50 years of earthquake data, totaling more than 2 million data points, collected through a custom Python web-scraping script using USGS database queries.}
-      \resumeItemListEnd
+        \resumeItem{Independently proposed and initiated a research investigation into earthquake dynamics with the aim of explooring the science behind seismic activity.}
+        \resumeItem{Developed a Python-based data acquisition workflow using USGS earthquake catalog queries, compiling and analyzing over two million seismic observations spanning more than 50 years across California and Alaska.}
+        \resumeItem{Investigated earthquake-count series, inter-event intervals, and seismic activity clustering as potential measures of temporal dependence, with an emphasis on \textbf{long-memory behavior} and \textbf{score-driven fractional integration models}.}
+        \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 % PARTICLE ILLIQUIDITY RESEARCH WITH MUBIN %
 \resumeSubHeadingListStart  
     \resumeSubheading
-      {Computational Physics Researcher $|$ Atomic Particle Simulation \& Modeling}{April 2026 – Present}
+      {Undergraduate Research $|$ Computational Physics \& Molecular Dynamics}{April 2026 – Present}
       {Faculty Guided Research w/ \href{https://www.valdosta.edu/about/directory/profile/smubin}{Prof. Shafat Mubin}}{On-Site/Remote}
       \resumeItemListStart
-      \resumeItem{Studied the Velocity Autocorrelation Function (VACF) to analyze how particle velocities evolve over time in molecular dynamics trajectories.}
-      \resumeItem{Investigated how velocity data can be modeled using Gaussian distributions to better understand equilibrium behavior in simulated systems.}  
-      \resumeItem{Developed foundational knowledge in molecular dynamics, time-series behavior, and simulation-based scientific computing.}
+      \resumeItem{Studied the \textbf{Velocity Autocorrelation Function (VACF)} to analyze how particle velocities evolve over time in molecular dynamics trajectories.}
+      \resumeItem{Developing familiarity with \textbf{LAMMPS simulation workflows}, including \textbf{interatomic potentials}, \textbf{time integration}, \textbf{thermostats}, and \textbf{atomic trajectory analysis}.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Financial Econometrics Researcher $|$ Score-driven Voltaility Filters}{Jan 2025 – Dec 2025}
+      {Undergraduate Research $|$ Score-Driven Volatility Models}{Jan 2025 – Dec 2025}
       {Faculty Guided Research w/ \href{https://business.mercer.edu/faculty-and-insights/faculty-directory/dr-szabolcs-blazsek/}{Prof. Szabolcs Blaszek} and \href{https://www.linkedin.com/in/adamkobor/}{Adam Kobor}}{On-Site/Remote}
       \resumeItemListStart
       \resumeItem{Contributed to work showing that Hessian-driven gradient scaling can improve volatility-filter performance relative to existing scaling methods.}
@@ -209,7 +236,7 @@
         \resumeItem{Analyzed financial time-series data across Bitcoin, S\&P 500, Gold, U.S. REITs, and CHF/JPY from 2010--2025 using R, GAUSS, Excel, and Bloomberg Terminal data.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
+\section{Industry \& Work Experience}
   \resumeSubHeadingListStart  
     \resumeSubheading
       {Financial Analyst Intern}{May 2025 – Dec 2025}
@@ -220,6 +247,35 @@
         \resumeItem{Created clear documentation that enabled cross-departmental collaboration and made Finance operations easy for shareholders and upline leaders to understand.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%-----------AI/ML + Physics PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+          {\textbf{CourtSignal} $|$ \emph{Assistive Technology for Hearing Impaired Athletes}}{In Progress}
+          {Independent Research \& Engineering Project}{}
+          \resumeItemListStart
+            \resumeItem{Developing an assistive technology concept leveraging visual and haptic signaling to improve real-time communication accessibility in competitive athletic environments.}
+            \resumeItem{Selected for the University System of Georgia and Georgia Tech's inaugural 2026 Startup Studio seminar, supporting customer discovery, entrepreneurship, and early-stage product validation.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+        % RETURN AND FIX THE SECTION BELOW
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {\textbf{Custom Cyberdeck}}{In Progress}
+        {Independent Engineering Project $|$ Portable, Powerful, and Playable}{}
+        \resumeItemListStart
+          \resumeItem{Learning the theory behind designing a compact, handheld computing system optimized for extended use during collegiate athletic travel, prioritizing ergonomics, portability, and battery efficiency.}
+        \resumeItemListEnd
+      \resumeSubHeadingListEnd
+        % \resumeProjectHeading
+        %   {\href{}{\textbf{CC-Me-Planner}} $|$ \emph{Platform to simplify the community college academic advising process}}{\textbf{(In Progress)}}
+        %   \resumeItemListStart
+        %     \resumeItem{Developing a full-stack academic planning web application designed to simplify semester, AA, and bachelor's degree scheduling for community college students in South Florida.}
+        %     \resumeItem{Designing with accessibility at the forefront, addressing barriers faced by returning adults, first-generation students, and transfer-track students.}
+        %   \resumeItemListEnd
+
 %-----------LEADERSHIP, ATHLETICS, AND SERVICE -----------
 \section{Leadership, Athletics, and Service}
 % LONG MEMORY SEISMICITY RESEARCH WITH SZABI %
@@ -233,26 +289,6 @@
         \resumeItem{Represent university athletic programs in competitive, team-based environments requiring accountability, preparation, adaptability, and consistent execution.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%-----------AI/ML + Physics PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-          {\href{}{\textbf{CC-Me-Planner}} $|$ \emph{Platform to simplify the community college academic advising process}}{\textbf{(In Progress)}}
-          \resumeItemListStart
-            \resumeItem{Developing a full-stack academic planning web application designed to simplify semester, AA, and bachelor's degree scheduling for community college students in South Florida.}
-            \resumeItem{Designing with accessibility at the forefront, addressing barriers faced by returning adults, first-generation students, and transfer-track students.}
-          \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{CourtSignal} $|$ \emph{Assistive Technology for Hearing Impaired Athletes}}{\textbf{(In Progress)}}
-          \resumeItemListStart
-            \resumeItem{Developing an assistive technology concept designed to improve real-time communication access for deaf and hard-of-hearing athletes in competitive sports environments.}
-            \resumeItem{Selected for the University System of Georgia and Georgia Tech's inaugural 2026 Startup Studio seminar to advance the project through entrepreneurship training, customer discovery, and early-stage product validation.}
-            \resumeItem{Researching communication barriers faced by athletes with hearing loss, including coach instruction, teammate coordination, and environmental awareness during practices and games.}
-            \resumeItem{Exploring software-based design approaches that prioritize accessibility, mobility, and practical use within high-performance athletic settings.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
     
 
 %-----------EXTRACURRICULAR ACTIVITIES-----------
@@ -269,7 +305,7 @@
         \resumeProjectHeading
           {\textbf{\href{https://csel.mercer.edu/student-engagement/book-clubs/}{Book Club Fellow}} $|$ \emph{Selected as one of ten students to participate through Mercer Universities Economics Department}}{}
         \resumeProjectHeading
-          {\textbf{\href{https://www.youtube.com/@AP4Pres}{Content Creation}} $|$ \emph{Streamed myself doing psets and projects on youtube amassing $\sim$20,000 views}}{}
+          {\textbf{\href{https://www.youtube.com/@AP4Pres}{Content Creation}} $|$ \emph{Live streamed my workflow on YouTube amassing $\sim$20,000 views}}{}
         \resumeProjectHeading
           {\textbf{\href{https://www.gotostage.com/channel/ae3be1897f1e486ebe5a0a0d417396e2/recording/6ecf53ff64484050af20f49c86a9d760/watch}{AWS Campus Prep Series Participant}} $|$ \emph{Completed a Summer-long series of webinars regarding Amazon Careers and Cloud Services}}{}
   \resumeSubHeadingListEnd
